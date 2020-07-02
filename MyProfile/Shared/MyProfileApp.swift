@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct MyProfileApp: App {
+    
+    @StateObject private var profileUsecase = ProfileUsecase()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SummaryView(usecase: profileUsecase,
+                        nameUsecase: profileUsecase,
+                        birthdayUsecase: profileUsecase)
         }
     }
 }
