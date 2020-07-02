@@ -15,6 +15,7 @@
 		BF0EE89F24AE106800522E77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE87424AE106600522E77 /* ContentView.swift */; };
 		BF0EE8A024AE106800522E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EE87524AE106800522E77 /* Assets.xcassets */; };
 		BF0EE8A124AE106800522E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EE87524AE106800522E77 /* Assets.xcassets */; };
+		BF0EE8B224AE10BB00522E77 /* ProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8B124AE10BB00522E77 /* ProfileUsecase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BF0EE89524AE106800522E77 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0EE89924AE106800522E77 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		BF0EE89B24AE106800522E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0EE8B124AE10BB00522E77 /* ProfileUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUsecase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				BF0EE87324AE106600522E77 /* MyProfileApp.swift */,
 				BF0EE87424AE106600522E77 /* ContentView.swift */,
+				BF0EE8B024AE10AC00522E77 /* Domain */,
 				BF0EE87524AE106800522E77 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +152,14 @@
 				BF0EE89B24AE106800522E77 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		BF0EE8B024AE10AC00522E77 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BF0EE8B124AE10BB00522E77 /* ProfileUsecase.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			files = (
 				BF0EE89E24AE106800522E77 /* ContentView.swift in Sources */,
 				BF0EE89C24AE106800522E77 /* MyProfileApp.swift in Sources */,
+				BF0EE8B224AE10BB00522E77 /* ProfileUsecase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
