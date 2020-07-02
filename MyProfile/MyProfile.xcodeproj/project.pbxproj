@@ -25,6 +25,8 @@
 		BF29D92124AE683A00E69A1B /* NameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8DB24AE507600522E77 /* NameSetupView.swift */; };
 		BF29D92224AE683A00E69A1B /* BirthdaySetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29D91D24AE56D600E69A1B /* BirthdaySetupView.swift */; };
 		BF29D93924AE696400E69A1B /* UnitTests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29D93824AE696400E69A1B /* UnitTests_macOS.swift */; };
+		BF29D94424AE69D200E69A1B /* ProfileUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29D94224AE69B200E69A1B /* ProfileUsecaseTests.swift */; };
+		BF29D94524AE69D200E69A1B /* ProfileUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29D94224AE69B200E69A1B /* ProfileUsecaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 		BF29D93624AE696400E69A1B /* UnitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UnitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF29D93824AE696400E69A1B /* UnitTests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests_macOS.swift; sourceTree = "<group>"; };
 		BF29D93A24AE696400E69A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF29D94224AE69B200E69A1B /* ProfileUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUsecaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,7 @@
 				BF0EE88324AE106800522E77 /* macOS */,
 				BF0EE88D24AE106800522E77 /* Tests iOS */,
 				BF0EE89824AE106800522E77 /* Tests macOS */,
+				BF29D94124AE699800E69A1B /* UnitTests Shared */,
 				BF0EE8CD24AE165800522E77 /* UnitTests iOS */,
 				BF29D93724AE696400E69A1B /* UnitTests macOS */,
 				BF0EE87B24AE106800522E77 /* Products */,
@@ -239,6 +243,14 @@
 				BF29D93A24AE696400E69A1B /* Info.plist */,
 			);
 			path = "UnitTests macOS";
+			sourceTree = "<group>";
+		};
+		BF29D94124AE699800E69A1B /* UnitTests Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BF29D94224AE69B200E69A1B /* ProfileUsecaseTests.swift */,
+			);
+			path = "UnitTests Shared";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0EE8CF24AE165800522E77 /* UnitTests_iOS.swift in Sources */,
+				BF29D94424AE69D200E69A1B /* ProfileUsecaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF29D93924AE696400E69A1B /* UnitTests_macOS.swift in Sources */,
+				BF29D94524AE69D200E69A1B /* ProfileUsecaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
