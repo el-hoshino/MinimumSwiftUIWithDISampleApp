@@ -9,7 +9,7 @@ import SwiftUI
 
 protocol SummaryDataUsecaseProtocol: ObservableObject {
     var myName: String { get }
-    var myAge: Int { get }
+    var myAge: String { get }
 }
 
 struct SummaryView<
@@ -28,7 +28,7 @@ struct SummaryView<
                 NavigationLink(title: "Name", content: usecase.myName) {
                     NameSetupView(usecase: nameUsecase)
                 }
-                NavigationLink(title: "Age", content: "\(usecase.myAge)") {
+                NavigationLink(title: "Age", content: usecase.myAge) {
                     BirthdaySetupView(usecase: birthdayUsecase)
                 }
             }
@@ -43,7 +43,7 @@ struct SummaryView_Previews: PreviewProvider {
                                   NameSetupUsecaseProtocol,
                                   BirthdaySetupUsecaseProtocol {
         @State var myName = "Hello, World!"
-        @State var myAge = 1
+        @State var myAge = "???"
         var name: String {
             set { myName = newValue }
             get { myName }
