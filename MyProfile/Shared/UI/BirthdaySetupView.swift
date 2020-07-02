@@ -7,14 +7,32 @@
 
 import SwiftUI
 
-struct BirthdaySetupView: View {
+protocol BirthdaySetupUsecaseProtocol: ObservableObject {
+    var birthday: Date { get set }
+}
+
+struct BirthdaySetupView<Usecase: BirthdaySetupUsecaseProtocol>: View {
+    
+    @ObservedObject var usecase: Usecase
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        DatePicker("Input your birthday", selection: $usecase.birthday, displayedComponents: .date)
     }
 }
 
 struct BirthdaySetupView_Previews: PreviewProvider {
+    
+    final class Usecase: BirthdaySetupUsecaseProtocol {
+        @State var birthday: Date
+        init(birthday: Date) {
+            self.birthday = birthday
+        }
+    }
+    
+    static var birthday = Date()
+    
     static var previews: some View {
-        BirthdaySetupView()
+        BirthdaySetupView(usecase: Usecase(birthday: birthday))
+            .previewLayout(.sizeThatFits)
     }
 }
