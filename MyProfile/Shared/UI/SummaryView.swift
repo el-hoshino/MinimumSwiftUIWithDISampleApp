@@ -25,7 +25,7 @@ struct SummaryView<
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(title: "Title", content: usecase.myName) {
+                NavigationLink(title: "Name", content: usecase.myName) {
                     NameSetupView(usecase: nameUsecase)
                 }
                 NavigationLink(title: "Age", content: "\(usecase.myAge)") {
