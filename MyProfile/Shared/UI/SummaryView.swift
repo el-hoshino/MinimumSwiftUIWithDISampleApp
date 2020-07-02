@@ -12,14 +12,26 @@ protocol SummaryDataUsecaseProtocol: ObservableObject {
     var myAge: Int { get }
 }
 
-struct SummaryView<Usecase: SummaryDataUsecaseProtocol>: View {
+struct SummaryView<
+    Usecase: SummaryDataUsecaseProtocol,
+    NameUsecase: NameSetupUsecaseProtocol,
+    BirthdayUsecase: BirthdaySetupUsecaseProtocol>: View {
     
     @ObservedObject var usecase: Usecase
     
+    let nameUsecase: NameUsecase
+    let birthdayUsecase: BirthdayUsecase
+        
     var body: some View {
-        List {
-            SummaryCell(title: "Title", content: usecase.myName)
-            SummaryCell(title: "Age", content: "\(usecase.myAge)")
+        NavigationView {
+            List {
+                NavigationLink(title: "Title", content: usecase.myName) {
+                    NameSetupView(usecase: nameUsecase)
+                }
+                NavigationLink(title: "Age", content: "\(usecase.myAge)") {
+                    BirthdaySetupView(usecase: birthdayUsecase)
+                }
+            }
         }
     }
 }
@@ -36,4 +48,16 @@ struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
         SummaryView(usecase: usecase)
     }
+}
+
+private extension NavigationLink {
+    
+    init(title: String, content: String, destination: () -> Destination) where Label == SummaryCell {
+        self = NavigationLink(
+            destination: destination(),
+            label: {
+                SummaryCell(title: title, content: content)
+            })
+    }
+    
 }
