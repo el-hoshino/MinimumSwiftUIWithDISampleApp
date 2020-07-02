@@ -21,6 +21,7 @@
 		BF0EE8D824AE2F5F00522E77 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */; };
 		BF0EE8DA24AE32E900522E77 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8D924AE32E800522E77 /* SummaryCell.swift */; };
 		BF0EE8DC24AE507600522E77 /* NameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8DB24AE507600522E77 /* NameSetupView.swift */; };
+		BF29D91E24AE56D600E69A1B /* BirthdaySetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF29D91D24AE56D600E69A1B /* BirthdaySetupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		BF0EE8D924AE32E800522E77 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		BF0EE8DB24AE507600522E77 /* NameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSetupView.swift; sourceTree = "<group>"; };
+		BF29D91D24AE56D600E69A1B /* BirthdaySetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySetupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */,
 				BF0EE8D924AE32E800522E77 /* SummaryCell.swift */,
 				BF0EE8DB24AE507600522E77 /* NameSetupView.swift */,
+				BF29D91D24AE56D600E69A1B /* BirthdaySetupView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				BF0EE8DC24AE507600522E77 /* NameSetupView.swift in Sources */,
 				BF0EE8B224AE10BB00522E77 /* ProfileUsecase.swift in Sources */,
 				BF0EE8DA24AE32E900522E77 /* SummaryCell.swift in Sources */,
+				BF29D91E24AE56D600E69A1B /* BirthdaySetupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
