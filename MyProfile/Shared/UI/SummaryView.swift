@@ -38,15 +38,27 @@ struct SummaryView<
 
 struct SummaryView_Previews: PreviewProvider {
     
-    final class DummyDataUsecase: SummaryDataUsecaseProtocol {
+    final class DummyDataUsecase: SummaryDataUsecaseProtocol,
+                                  NameSetupUsecaseProtocol,
+                                  BirthdaySetupUsecaseProtocol {
         @State var myName = "Hello, World!"
         @State var myAge = 1
+        var name: String {
+            set { myName = newValue }
+            get { myName }
+        }
+        var birthday: Date {
+            set { print("\(newValue)") }
+            get { Date() }
+        }
     }
     
     static let usecase = DummyDataUsecase()
     
     static var previews: some View {
-        SummaryView(usecase: usecase)
+        SummaryView(usecase: usecase,
+                    nameUsecase: usecase,
+                    birthdayUsecase: usecase)
     }
 }
 
