@@ -10,12 +10,12 @@ import Combine
 
 final class ProfileUsecase: ObservableObject {
     
-    @Published var name: String?
-    @Published var birthday: Date?
+    @Published var publishedName: String?
+    @Published var publishedBirthday: Date?
     
     func ageOnYear(at date: Date) -> Int? {
         
-        guard let birthday = birthday else {
+        guard let birthday = publishedBirthday else {
             return nil
         }
         

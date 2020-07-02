@@ -20,7 +20,7 @@ class UnitTests_iOS: XCTestCase {
         let usecase = ProfileUsecase()
         XCTAssertNil(usecase.ageOnYear(at: date20000701))
         
-        usecase.birthday = date20000701
+        usecase.publishedBirthday = date20000701
         XCTAssertEqual(usecase.ageOnYear(at: date20000701), 0)
         XCTAssertEqual(usecase.ageOnYear(at: date20200630), 19)
         XCTAssertEqual(usecase.ageOnYear(at: date20200701), 20)
