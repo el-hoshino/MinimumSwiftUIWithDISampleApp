@@ -17,6 +17,7 @@ struct NameSetupView<Usecase: NameSetupUsecaseProtocol>: View {
     
     var body: some View {
         TextField("Insert your name here", text: $usecase.name)
+            .navigationTitle("Edit Name:")
     }
 }
 

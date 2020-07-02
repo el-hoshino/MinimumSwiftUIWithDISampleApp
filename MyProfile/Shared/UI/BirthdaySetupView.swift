@@ -17,6 +17,7 @@ struct BirthdaySetupView<Usecase: BirthdaySetupUsecaseProtocol>: View {
     
     var body: some View {
         DatePicker("Input your birthday", selection: $usecase.birthday, displayedComponents: .date)
+            .navigationTitle("Edit Birthday:")
     }
 }
 

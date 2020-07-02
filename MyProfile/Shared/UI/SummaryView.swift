@@ -32,6 +32,7 @@ struct SummaryView<
                     BirthdaySetupView(usecase: birthdayUsecase)
                 }
             }
+            .navigationTitle("My Profile")
         }
     }
 }
