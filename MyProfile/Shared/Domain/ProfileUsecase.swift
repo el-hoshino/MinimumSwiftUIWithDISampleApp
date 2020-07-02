@@ -10,12 +10,12 @@ import Combine
 
 final class ProfileUsecase: ObservableObject {
     
-    @Published var name: String?
-    @Published var birthday: Date?
+    @Published var publishedName: String?
+    @Published var publishedBirthday: Date?
     
     func ageOnYear(at date: Date) -> Int? {
         
-        guard let birthday = birthday else {
+        guard let birthday = publishedBirthday else {
             return nil
         }
         
@@ -23,6 +23,45 @@ final class ProfileUsecase: ObservableObject {
         
         return years
         
+    }
+    
+}
+
+extension ProfileUsecase: SummaryDataUsecaseProtocol {
+    
+    var myName: String {
+        publishedName ?? ""
+    }
+    
+    var myAge: Int {
+        ageOnYear(at: Date()) ?? 0
+    }
+    
+}
+
+extension ProfileUsecase: NameSetupUsecaseProtocol {
+    
+    var name: String {
+        get {
+            publishedName ?? ""
+        }
+        set {
+            publishedName = newValue
+        }
+    }
+    
+    
+}
+
+extension ProfileUsecase: BirthdaySetupUsecaseProtocol {
+    
+    var birthday: Date {
+        get {
+            publishedBirthday ?? Date()
+        }
+        set {
+            publishedBirthday = newValue
+        }
     }
     
 }
