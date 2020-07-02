@@ -7,14 +7,33 @@
 
 import SwiftUI
 
-struct NameSetupView: View {
+protocol NameSetupUsecaseProtocol: ObservableObject {
+    var name: String { get set }
+}
+
+struct NameSetupView<Usecase: NameSetupUsecaseProtocol>: View {
+    
+    @ObservedObject var usecase: Usecase
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField("Insert your name here", text: $usecase.name)
     }
 }
 
 struct NameSetupView_Previews: PreviewProvider {
+    
+    final class Usecase: NameSetupUsecaseProtocol {
+        @State var name: String
+        init(name: String) {
+            self.name = name
+        }
+    }
+    
     static var previews: some View {
-        NameSetupView()
+        Group {
+            NameSetupView(usecase: Usecase(name: ""))
+            NameSetupView(usecase: Usecase(name: "Your Name."))
+        }
+        .previewLayout(.sizeThatFits)
     }
 }
