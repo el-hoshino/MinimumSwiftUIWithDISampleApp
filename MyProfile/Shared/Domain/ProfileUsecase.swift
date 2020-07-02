@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import Combine
+
+final class ProfileUsecase: ObservableObject {
+    
+    @Published var name: String?
+    @Published var birthday: Date?
+    
+}
