@@ -11,8 +11,6 @@
 		BF0EE89A24AE106800522E77 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE89924AE106800522E77 /* Tests_macOS.swift */; };
 		BF0EE89C24AE106800522E77 /* MyProfileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE87324AE106600522E77 /* MyProfileApp.swift */; };
 		BF0EE89D24AE106800522E77 /* MyProfileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE87324AE106600522E77 /* MyProfileApp.swift */; };
-		BF0EE89E24AE106800522E77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE87424AE106600522E77 /* ContentView.swift */; };
-		BF0EE89F24AE106800522E77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE87424AE106600522E77 /* ContentView.swift */; };
 		BF0EE8A024AE106800522E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EE87524AE106800522E77 /* Assets.xcassets */; };
 		BF0EE8A124AE106800522E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0EE87524AE106800522E77 /* Assets.xcassets */; };
 		BF0EE8B224AE10BB00522E77 /* ProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8B124AE10BB00522E77 /* ProfileUsecase.swift */; };
@@ -50,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		BF0EE87324AE106600522E77 /* MyProfileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileApp.swift; sourceTree = "<group>"; };
-		BF0EE87424AE106600522E77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF0EE87524AE106800522E77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0EE87A24AE106800522E77 /* MyProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0EE87D24AE106800522E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				BF0EE87324AE106600522E77 /* MyProfileApp.swift */,
-				BF0EE87424AE106600522E77 /* ContentView.swift */,
 				BF0EE8D624AE2F4E00522E77 /* UI */,
 				BF0EE8B024AE10AC00522E77 /* Domain */,
 				BF0EE87524AE106800522E77 /* Assets.xcassets */,
@@ -399,7 +395,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0EE89E24AE106800522E77 /* ContentView.swift in Sources */,
 				BF0EE8D824AE2F5F00522E77 /* SummaryView.swift in Sources */,
 				BF0EE89C24AE106800522E77 /* MyProfileApp.swift in Sources */,
 				BF0EE8DC24AE507600522E77 /* NameSetupView.swift in Sources */,
@@ -413,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0EE89F24AE106800522E77 /* ContentView.swift in Sources */,
 				BF0EE89D24AE106800522E77 /* MyProfileApp.swift in Sources */,
 				BF0EE8B924AE13D700522E77 /* ProfileUsecase.swift in Sources */,
 			);
