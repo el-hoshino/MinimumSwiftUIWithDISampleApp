@@ -33,8 +33,8 @@ extension ProfileUsecase: SummaryDataUsecaseProtocol {
         publishedName ?? ""
     }
     
-    var myAge: Int {
-        ageOnYear(at: Date()) ?? 0
+    var myAge: String {
+        ageOnYear(at: Date()).map { "\($0)" } ?? ""
     }
     
 }
