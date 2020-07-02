@@ -37,3 +37,17 @@ struct SummaryCell_Previews: PreviewProvider {
         .previewLayout(.sizeThatFits)
     }
 }
+
+struct SummaryCellLibraryContent: LibraryContentProvider {
+    
+    @LibraryContentBuilder
+    var views: [LibraryItem] {
+        
+        LibraryItem(SummaryCell(title: "Title", content: "Content"),
+                    visible: true,
+                    title: "Summary Cell",
+                    category: .layout)
+        
+    }
+    
+}
