@@ -7,14 +7,43 @@
 
 import SwiftUI
 
-struct SummaryView: View {
+protocol SummaryDataUsecaseProtocol: ObservableObject {
+    var myName: String { get }
+    var myAge: Int { get }
+}
+
+struct SummaryView<Usecase: SummaryDataUsecaseProtocol>: View {
+    
+    @ObservedObject var usecase: Usecase
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            HStack {
+                Text("Name:")
+                Spacer()
+                Text("\(usecase.myName)")
+                    .font(.subheadline)
+            }
+            HStack {
+                Text("Age:")
+                Spacer()
+                Text("\(usecase.myAge)")
+                    .font(.subheadline)
+            }
+        }
     }
 }
 
 struct SummaryView_Previews: PreviewProvider {
+    
+    final class DummyDataUsecase: SummaryDataUsecaseProtocol {
+        @State var myName = "Hello, World!"
+        @State var myAge = 1
+    }
+    
+    static let usecase = DummyDataUsecase()
+    
     static var previews: some View {
-        SummaryView()
+        SummaryView(usecase: usecase)
     }
 }
