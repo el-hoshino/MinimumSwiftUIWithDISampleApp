@@ -18,18 +18,8 @@ struct SummaryView<Usecase: SummaryDataUsecaseProtocol>: View {
     
     var body: some View {
         List {
-            HStack {
-                Text("Name:")
-                Spacer()
-                Text("\(usecase.myName)")
-                    .font(.subheadline)
-            }
-            HStack {
-                Text("Age:")
-                Spacer()
-                Text("\(usecase.myAge)")
-                    .font(.subheadline)
-            }
+            SummaryCell(title: "Title", content: usecase.myName)
+            SummaryCell(title: "Age", content: "\(usecase.myAge)")
         }
     }
 }

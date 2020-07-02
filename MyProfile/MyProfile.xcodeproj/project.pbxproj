@@ -19,6 +19,7 @@
 		BF0EE8B924AE13D700522E77 /* ProfileUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8B124AE10BB00522E77 /* ProfileUsecase.swift */; };
 		BF0EE8CF24AE165800522E77 /* UnitTests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8CE24AE165800522E77 /* UnitTests_iOS.swift */; };
 		BF0EE8D824AE2F5F00522E77 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */; };
+		BF0EE8DA24AE32E900522E77 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EE8D924AE32E800522E77 /* SummaryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		BF0EE8CE24AE165800522E77 /* UnitTests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests_iOS.swift; sourceTree = "<group>"; };
 		BF0EE8D024AE165800522E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		BF0EE8D924AE32E800522E77 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0EE8D724AE2F5F00522E77 /* SummaryView.swift */,
+				BF0EE8D924AE32E800522E77 /* SummaryCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				BF0EE8D824AE2F5F00522E77 /* SummaryView.swift in Sources */,
 				BF0EE89C24AE106800522E77 /* MyProfileApp.swift in Sources */,
 				BF0EE8B224AE10BB00522E77 /* ProfileUsecase.swift in Sources */,
+				BF0EE8DA24AE32E900522E77 /* SummaryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
