@@ -26,3 +26,42 @@ final class ProfileUsecase: ObservableObject {
     }
     
 }
+
+extension ProfileUsecase: SummaryDataUsecaseProtocol {
+    
+    var myName: String {
+        publishedName ?? ""
+    }
+    
+    var myAge: Int {
+        ageOnYear(at: Date()) ?? 0
+    }
+    
+}
+
+extension ProfileUsecase: NameSetupUsecaseProtocol {
+    
+    var name: String {
+        get {
+            publishedName ?? ""
+        }
+        set {
+            publishedName = newValue
+        }
+    }
+    
+    
+}
+
+extension ProfileUsecase: BirthdaySetupUsecaseProtocol {
+    
+    var birthday: Date {
+        get {
+            publishedBirthday ?? Date()
+        }
+        set {
+            publishedBirthday = newValue
+        }
+    }
+    
+}
