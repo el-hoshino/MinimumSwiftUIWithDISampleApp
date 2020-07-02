@@ -13,4 +13,16 @@ final class ProfileUsecase: ObservableObject {
     @Published var name: String?
     @Published var birthday: Date?
     
+    func ageInYear(at date: Date) -> Int? {
+        
+        guard let birthday = birthday else {
+            return nil
+        }
+        
+        let years = Calendar.current.dateComponents([.year], from: birthday, to: date).year
+        
+        return years
+        
+    }
+    
 }
